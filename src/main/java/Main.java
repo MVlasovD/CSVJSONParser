@@ -19,7 +19,7 @@ public class Main {
         CSVReader csvReader = new CSVReader(new FileReader(fileName));
         ColumnPositionMappingStrategy<Employee> strategy = new ColumnPositionMappingStrategy<>();
         strategy.setType(Employee.class);
-        strategy.setColumnMapping("id", "firstName", "lastName", "country", "age");
+        strategy.setColumnMapping(columnMapping);
         CsvToBean<Employee> csv = new CsvToBeanBuilder<Employee>(csvReader)
                 .withMappingStrategy(strategy)
                 .build();

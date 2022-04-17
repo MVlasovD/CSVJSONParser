@@ -6,7 +6,6 @@ public class Employee {
     public int age;
 
     public Employee() {
-        // Пустой конструктор
     }
 
     public Employee(long id, String firstName, String lastName, String country, int age) {
@@ -15,5 +14,16 @@ public class Employee {
         this.lastName = lastName;
         this.country = country;
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", country='" + country + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
